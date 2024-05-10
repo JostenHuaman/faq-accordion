@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    background-color: var(--Light-pink);
+    & picture{
+        position: relative;
+    }
+    & .container{ 
+        position: absolute;
+        width: 335px;
+
+        background-color: var(--White);
+        left: 20px;
+        top: 150px;
+        border-radius: 10px;
+        & h1{
+            font-size: 2em;
+            color: var(--Dark-purple);
+            margin-left: 20px;
+            margin-top: 20px;
+            & img{
+                width: 20px;
+                margin-right: 20px;
+            } 
+        }
+        & .sub-container{
+            & div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 20px 10px;
+                & h2{
+                    font-size: 1em;
+                    cursor: pointer;
+                    &:hover{
+                        color: var(--Grayish-purple);
+                    }
+                }
+                & .icon-container{
+                    width: 20px;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                & img{
+                    margin-left: 10px;
+                }
+                & .icon-plus{
+                    display: none;
+                }
+            }
+            & p{
+                display: block;
+                font-size: 1em;
+                margin: 0px 20px;
+                color: var(--Grayish-purple);
+            }
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(0, 0%, 0%); }
+
+@media (min-width:767px){
+    body{
+        & .container{
+            width: 700px;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+        }
+    }
+}
